@@ -14,7 +14,7 @@ export default function Home({cats}) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async (context) => {
   const res = await fetch('https://catfact.ninja/fact')
   const cats = await res.json()
 
